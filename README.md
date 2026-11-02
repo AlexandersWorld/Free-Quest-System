@@ -105,7 +105,7 @@ Ok Now quest log component its the easiest we already stablished the components 
   </tr>
 </table>
 
-#### Quest Interaction Components
+### Quest Interaction Components
 
 These components are attached to actors that participate in the quest system.
 
