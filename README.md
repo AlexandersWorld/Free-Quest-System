@@ -209,11 +209,51 @@ These options provide the flexibility to create different quest structures, from
 
 ### Saving and Loading
 
-Saving and loading are handled separately from the Quest Log Component.
+FreeQuestSystem handles saving and loading through its GameMode, GameInstance, and SaveGame classes, keeping persistence independent from the Quest Log Component.
 
-FreeQuestSystem uses the GameMode, GameInstance, and SaveGame classes to manage persistence.
+The system provides a Blueprint-callable **Save Game** function that developers can invoke from anywhere in their Blueprint logic or C++ code.
 
-This separation keeps quest management independent from the game's save system.
+This allows developers to trigger saving whenever necessary without having to access or modify the internal quest management logic.
+
+#### Saving Game
+
+<table>
+  <tr>
+    <th>Save Game Function</th>
+    <th>BP_SaveGame</th>
+    <th>BP_GameInstance</th>
+    <th>BP_GameMode</th>
+  </tr>
+  <tr>
+    <td><img src="Documentation/Images/SavingGameBP.png" width="100%"/></td>
+    <td><img src="Documentation/Images/BP_SaveGame.png" width="100%"/></td>
+    <td><img src="Documentation/Images/BPGameInstance.png" width="100%"/></td>
+    <td><img src="Documentation/Images/BPGameMode.png" width="100%"/></td>
+  </tr>
+</table>
+
+For demonstration purposes, FreeQuestSystem uses the **2 keyboard key** to trigger the Save Game function.
+
+The function saves the current game data to the configured save slot:
+
+`FreeQuestSystem/Saved/SaveGames/Slot`
+
+#### GameInstance Setup
+
+To use the saving and loading functionality, developers must configure their project's GameInstance to use the FreeQuestSystem GameInstance implementation.
+
+Follow the setup steps below:
+
+<table>
+  <tr>
+    <th>Step 1</th>
+    <th>Step 2</th>
+  </tr>
+  <tr>
+    <td><img src="Documentation/Images/Step1GameStance.png" width="100%"/></td>
+    <td><img src="Documentation/Images/Step2GameInstance.png" width="100%"/></td>
+  </tr>
+</table>
 
 ### User Interface
 
