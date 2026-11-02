@@ -226,7 +226,7 @@ This allows developers to trigger saving whenever necessary without having to ac
   </tr>
   <tr>
     <td><img src="Documentation/Images/SavingGameBP.png" width="100%"/></td>
-    <td><img src="Documentation/Images/BP_SaveGame.png" width="100%"/></td>
+    <td><img src="Documentation/Images/BPSaveGame.png" width="100%"/></td>
     <td><img src="Documentation/Images/BPGameInstance.png" width="100%"/></td>
     <td><img src="Documentation/Images/BPGameMode.png" width="100%"/></td>
   </tr>
