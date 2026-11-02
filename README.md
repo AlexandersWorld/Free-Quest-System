@@ -111,8 +111,6 @@ These components are attached to actors that participate in the quest system.
 
 **Quest Giver Component** & **Quest Completer Component**
 
-**Quest Giver Component** & **Quest Completer Component**
-
 <table>
   <tr>
     <th>BPC QuestGiverComponent</th>
@@ -145,7 +143,6 @@ Allows the player to turn in and complete quests when a separate completion inte
 Each quest has a unique ID corresponding to its Data Table Row Name. To configure a Quest Completer, developers specify the Row Name of the quest they want that actor to complete.
 
 **Quest Objective Component**
-
 
 <table>
   <tr>
