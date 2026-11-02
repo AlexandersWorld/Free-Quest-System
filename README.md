@@ -109,21 +109,60 @@ Ok Now quest log component its the easiest we already stablished the components 
 
 These components are attached to actors that participate in the quest system.
 
+**Quest Giver Component** & **Quest Completer Component**
+
+**Quest Giver Component** & **Quest Completer Component**
+
+<table>
+  <tr>
+    <th>BPC QuestGiverComponent</th>
+    <th>BPC QuestGiverComponent Details</th>
+    <th>BPC QuestCompleterComponent Details</th>
+  </tr>
+  <tr>
+    <td><img src="Documentation/Images/QuestGiverComponent.png" width="100%"/></td>
+    <td><img src="Documentation/Images/QuestGiverComponentDetails.png" width="100%"/></td>
+    <td><img src="Documentation/Images/QuestCompleterDetails.png" width="100%"/></td>
+  </tr>
+</table>
+
 **Quest Giver Component**
 
 Allows an actor to offer quests to the player and handle quest acceptance.
 
-**Quest Objective Component**
+The component uses `DT_QuestData` to configure which quest the NPC offers. Developers select the appropriate Data Table Row, which serves as the Quest ID.
 
-Handles interactions associated with quest objectives and contributes to quest progression.
+The component also allows developers to configure:
 
-Each objective has its own unique ID, which developers can define in code. This ID is used to identify and complete the corresponding objective.
+- `QuestGiverWidget`: Widget displayed when offering a quest.
+- `QuestTurninWidget`: Widget associated with quest turn-in.
+- `BPQuestActor`: Blueprint actor associated with the accepted quest.
 
 **Quest Completer Component**
 
 Allows the player to turn in and complete quests when a separate completion interaction is required.
 
 Each quest has a unique ID corresponding to its Data Table Row Name. To configure a Quest Completer, developers specify the Row Name of the quest they want that actor to complete.
+
+**Quest Objective Component**
+
+
+<table>
+  <tr>
+    <th>BPC QuestObjectiveComponent</th>
+    <th>BPC QuestObjectiveComponent Details</th>
+    <th>DT ObjectiveID</th>
+  </tr>
+  <tr>
+    <td><img src="Documentation/Images/QuestObjectiveComponent.png" width="100%"/></td>
+    <td><img src="Documentation/Images/QuestObjectiveDetails.png" width="100%"/></td>
+    <td><img src="Documentation/Images/DTQuestObjectiveID.png" width="100%"/></td>
+  </tr>
+</table>
+
+Handles interactions associated with quest objectives and contributes to quest progression.
+
+Each objective has its own unique ID, which developers can define in code. This ID is used to identify and complete the corresponding objective.
 
 ### Quest Identification
 
