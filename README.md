@@ -3,7 +3,7 @@ FreeQuestSystem is a reusable Quest System for Unreal Engine 5, originally based
 I used Ryan's original Blueprint implementation as the foundation, extending its functionality, introducing additional features, and developing a C++ implementation to make the system more flexible and accessible to both Blueprint and C++ developers.
 
 <p align="center">
-    <img src="Documentation/Images/BCKSHP1337_Logo.png"
+    <img src="Documentation/Images/Sprite-blacksheeplogo1.png"
          alt="BCKSHP1337 Logo"
          width="250"/>
 </p>
