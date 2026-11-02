@@ -174,11 +174,38 @@ This allows the system to identify both the quest being managed and the specific
 
 **Quest Base (`AMR_QuestBase`)**
 
-Represents an accepted quest instance and provides its runtime representation.
+AMR_QuestBase represents an active quest instance created when the player accepts a quest. It serves as the runtime representation of the accepted quest, managing its current state and progression throughout gameplay.
+
+Each quest instance uses the quest information defined in DT_QuestData (FQuestDetails) as its foundation, allowing the system to keep track of the accepted quest independently while maintaining its configured stages, objectives, and rewards.
+
+It is responsible for maintaining the quest's runtime information, including its current stage, objective progression, and completion state. As objectives are completed, the quest instance updates its progression accordingly until all required objectives have been fulfilled.
+
+This separation between quest data and quest instances allows developers to define quests in advance and create active instances of those quests during gameplay.
 
 **Quest Data (`FQuestDetails`)**
 
-Contains the quest information and objective data used by the system.
+<table>
+  <tr>
+    <th>DT Quest Data Details</th>
+  </tr>
+  <tr>
+    <td><img src="Documentation/Images/DTQuestDetails.png" width="100%"/></td>
+  </tr>
+</table>
+
+`FQuestDetails`, defined in `QuestTypes.h`, is the core data structure of FreeQuestSystem. It defines the information and configuration of each quest and serves as the foundation for the quest system.
+
+Quests are configured through `DT_QuestData`, where each Data Table Row represents an individual quest. The Row Name serves as the unique Quest ID.
+
+Each quest supports several configuration options, including:
+
+- **Quest Type:** Define whether the quest is a Main Quest or Side Quest.
+- **Self Complete:** Determines whether the quest completes automatically once its objectives are fulfilled or requires a separate turn-in interaction.
+- **Quest Stages:** Organize quests into different stages.
+- **Objectives:** Configure multiple objectives within each stage.
+- **Rewards:** Configure quest rewards, including items, experience points (XP), and currency.
+
+These options provide the flexibility to create different quest structures, from simple single-objective quests to more elaborate multi-stage quests with multiple objectives and rewards.
 
 ### Saving and Loading
 
